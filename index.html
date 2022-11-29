@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guessing Game</title>
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<aside>
+    <button class="start-game-button c1" type="button" id="bttStartGame" onclick="startGame();">INICIAR JOGO</button><br><br>
+    <button class="start-game-button" type="button" id="bttRemoveBox" onclick="restartGame();">RESETAR JOGO </button>
+    <div class="rules">
+        <h3>Regras do Jogo:</h3>
+        <hr>
+        <ol>
+            <li>Ao iniciar o jogo, determine uma quantidade de botões à serem gerados;</li>
+            <li>Após gerar os botões, o sistema selecionará aleatoriamente um dos botões;</li>
+            <li>Selecione um botão para tentar acertar a escolha do sistema;</li>
+            <li>A pontuação máxima é 10 e você já inicia com esse valor, que vai sendo reduzido
+            a cada erro;
+            </li>
+            <li>Uma dica será apresentada juntamente com sua pontuação
+            à cada tentativa;</li>
+        </ol>
+    </div>
+</aside>
+<div class="tipBox">
+    <span id="tip" class="show">Tente acertar o botão selecionado!</span>
+    <span id="grades" class="show">10</span>
+</div>
+<div class="form-popup" id="myForm">
+<form class="form-container">
+    <h1>Definições</h1>
+    <label for="iptMax"><b>Número de Botões</b></label>
+    <input type="text" id="iptMax" placeholder="Entre com o Número de Botões" name="iptMax" required>
+    <button type="button" id="bttCreateBox" class="btn" onclick="createBoxes();closeForm();">Gerar</button>
+</form>
+</div>
+<script src="js/form_script.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
