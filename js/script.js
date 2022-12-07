@@ -11,6 +11,7 @@ function createBoxes(){
 
     for(let i=1; i<=qtdMax; i++){
         const elem = document.createElement('button');
+        elem.setAttribute('type', 'button');
         elem.setAttribute('class', 'box');
         elem.setAttribute('id',i);
 
